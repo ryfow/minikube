@@ -137,6 +137,33 @@ var Addons = map[string]*Addon{
 			"registry-creds-rc.yaml",
 			"0640"),
 	}, false, "registry-creds"),
+        "elk": NewAddon([]*MemoryAsset{
+		NewMemoryAsset(
+			"deploy/addons/elk/elasticsearch-rc.yaml",
+			constants.AddonsPath,
+			"elasitcsearch-rc.yaml",
+			"0640"),
+		NewMemoryAsset(
+			"deploy/addons/elk/elasticsearch-svc.yaml",
+			constants.AddonsPath,
+			"elasticsearch-svc.yaml",
+			"0640"),
+		NewMemoryAsset(
+			"deploy/addons/elk/fluentd-rc.yaml",
+			constants.AddonsPath,
+			"fluentd-rc.yaml",
+			"0640"),
+		NewMemoryAsset(
+			"deploy/addons/elk/kibana-logging-rc.yaml",
+			constants.AddonsPath,
+			"kibana-logging-rc.yaml",
+			"0640"),
+		NewMemoryAsset(
+			"deploy/addons/elk/kibana-logging-svc.yaml",
+			constants.AddonsPath,
+			"kibana-logging-svc.yaml",
+			"0640"),
+          }, false, "elk"),
 }
 
 func AddMinikubeAddonsDirToAssets(assetList *[]CopyableFile) {

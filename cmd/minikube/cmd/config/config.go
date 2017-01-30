@@ -149,6 +149,12 @@ var settings = []Setting{
 		validations: []setFn{IsValidAddon},
 		callbacks:   []setFn{EnableOrDisableAddon},
 	},
+        {
+		name:        "elk",
+		set:         SetBool,
+		validations: []setFn{IsValidAddon},
+		callbacks:   []setFn{EnableOrDisableAddon},
+	},
 	{
 		name: "hyperv-virtual-switch",
 		set:  SetString,
